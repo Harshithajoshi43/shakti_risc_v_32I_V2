@@ -109,7 +109,7 @@ By modularizing each function—pipeline stages, ALU, CSR, register file, memory
 
 ---
 
-## 🔍 System Block Diagram
+## System Block Diagram
 
 ![WhatsApp Image 2025-05-24 at 18 17 38_825da6d7](https://github.com/user-attachments/assets/0027b169-4ba1-4df1-b2c5-42eab3f37c16)
 
