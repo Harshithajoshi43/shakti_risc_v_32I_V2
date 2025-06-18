@@ -4,6 +4,37 @@ This project implements a **minimal System-on-Chip (SoC)** based on the **SHAKTI
 
 ---
 
+## Reproduction Steps
+
+Follow these steps in order. Each command is in its own code block so it can be copied independently:
+
+1. **Clone the repository**  
+   ```bash
+   git clone https://github.com/Harshithajoshi43/shakti_risc_v_32I_V2
+This command downloads a full copy of this repository (all files, history, and folders) into a new local folder named `shakti_risc_v_32I`.
+
+2. **Change into the shakthi_basic directory**
+
+   ```
+   cd shakti_risc_v_32I_V2
+   ```
+   
+3. **Build the FPGA bitstream**
+
+   ```
+   make clean
+   make all
+   ```
+This command synthesizes your Verilog into a netlist, places & routes it for the target FPGA, and produces the final bitstream (`.bin`) along with intermediate files (e.g. `.json`, `.asc`) in the `build/` directory.
+   
+4. **Flash the board**
+
+   ```
+   sudo make flash
+   ```
+This command takes the generated FPGA bitstream (`mkSoc.bin`) from the `build/` directory and programs it onto the connected FPGA board over USB/JTAG, so your design actually runs on the hardware.
+   
+---
 
 ##  Project Objective
 
@@ -100,37 +131,7 @@ By modularizing each function—pipeline stages, ALU, CSR, register file, memory
 
 ---
 
-## Reproduction Steps
 
-Follow these steps in order. Each command is in its own code block so it can be copied independently:
-
-1. **Clone the repository**  
-   ```bash
-   git clone https://github.com/Harshithajoshi43/shakti_risc_v_32I_V2
-This command downloads a full copy of this repository (all files, history, and folders) into a new local folder named `shakti_risc_v_32I`.
-
-2. **Change into the shakthi_basic directory**
-
-   ```
-   cd shakti_risc_v_32I_V2
-   ```
-   
-3. **Build the FPGA bitstream**
-
-   ```
-   make clean
-   make all
-   ```
-This command synthesizes your Verilog into a netlist, places & routes it for the target FPGA, and produces the final bitstream (`.bin`) along with intermediate files (e.g. `.json`, `.asc`) in the `build/` directory.
-   
-4. **Flash the board**
-
-   ```
-   sudo make flash
-   ```
-This command takes the generated FPGA bitstream (`mkSoc.bin`) from the `build/` directory and programs it onto the connected FPGA board over USB/JTAG, so your design actually runs on the hardware.
-   
----
 
 ##  Target Platform
 
