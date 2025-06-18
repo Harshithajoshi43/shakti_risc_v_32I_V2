@@ -4508,6 +4508,6 @@ Found and reported 0 problems.
 33.49. Executing JSON backend.
 
 Warnings: 173 unique messages, 181 total
-End of script. Logfile hash: 9fd0f3abac, CPU: user 11.72s system 0.05s, MEM: 69.92 MB peak
+End of script. Logfile hash: 9fd0f3abac, CPU: user 16.39s system 0.09s, MEM: 70.02 MB peak
 Yosys 0.33 (git sha1 2584903a060)
-Time spent: 23% 7x techmap (3 sec), 18% 49x opt_expr (2 sec), ...
+Time spent: 25% 7x techmap (4 sec), 17% 49x opt_expr (3 sec), ...
