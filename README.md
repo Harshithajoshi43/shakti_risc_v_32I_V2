@@ -116,7 +116,7 @@ By modularizing each function—pipeline stages, ALU, CSR, register file, memory
 
 ---
 
-## ⚙ Working Principle
+## Working Principle
 
 1. **Power‑On & Reset**  
    - Upon power‑up, the **Clock/Reset Generator** asserts a synchronous, active‑low reset (`RST_N`) for a few clock cycles, ensuring all registers and FIFOs initialize to known states.  
