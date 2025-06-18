@@ -36,6 +36,26 @@ This command takes the generated FPGA bitstream (`mkSoc.bin`) from the `build/` 
    
 ---
 
+## Steps used to generate firmware.hex
+
+1. **Compile C code into ELF binary using your linker script**
+
+```
+riscv32-unknown-elf-gcc -Wall -O0 -ffreestanding -nostdlib -mabi=ilp32 -march=rv32i -o main.elf main.c -T linker.ld
+```
+
+2. **Convert ELF to raw binary**
+
+```
+riscv32-unknown-elf-objcopy -O binary main.elf main.bin
+```
+
+3. **Convert binary to hex (4 bytes per line, compatible with SHAKTI memory format)**
+
+```
+xxd -p -c 4 main.bin > firmware.hex
+```
+
 ##  Project Objective
 
 The objective of this project is to:
